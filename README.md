@@ -27,9 +27,8 @@ Caso não esteja instado, confira os links extras.
 
 ## Rodando a aplicação
 1. Clone o projeto do GitHub ou baixe o repositório;
-2. Navegue até o diretório `/backend` e execute o comando: `npm install` para instalar as dependências;
-3. Navegue até o diretório raiz do projeto;
-4. Execute os comandos para inicializar o ambiente com o Terraform:
+2. Navegue até o diretório raiz do projeto;
+3. Execute os comandos para inicializar o ambiente com o Terraform:
 
 ```bash
 terraform init
@@ -39,8 +38,8 @@ terraform apply # digite 'yes' se estiver tudo correto
  
 **Obs.:** O `terraform init` só é necessário na primeira vez.
 
-5. (Opcional) Verifique se os containers foram iniciados corretamente: `docker ps`
-6. Acesse a página do frontend: [http://localhost:8080/](http://localhost:8080/)
+4. (Opcional) Verifique se os containers foram iniciados corretamente: `docker ps`
+5. Acesse a página do frontend: [http://localhost:8080/](http://localhost:8080/)
 
 ### Configurando as variáveis de ambiente
 
@@ -68,6 +67,7 @@ Caso deseje interromper a aplicação por completo, utilize: `terraform destroy`
 - **Erro ao aplicar o Terraform:** Verifique se você tem as permissões corretas para acessar o Docker e criar recursos.
 - **Containers não iniciam:** Verifique os logs dos containers com o comando `docker logs <nome_do_container>` para identificar erros.
 - **Aplicação não acessível:** Verifique se os containers estão rodando na rede correta e se as portas estão expostas corretamente.<br>
+
 **Windows** <br>
 Para o Windows, pode ser que haja algum erro. Algumas dicas para solucionar problemas:
 - Verificar a instalação do Docker e Terraform;
@@ -106,6 +106,7 @@ Para o Windows, pode ser que haja algum erro. Algumas dicas para solucionar prob
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/)
 - [Dashboards Grafana](https://grafana.com/grafana/dashboards/)
+- [NGNIX Prometheus Exporter](https://github.com/nginx/nginx-prometheus-exporter)
 
 **Links Extras**
 - [Instalação Docker](https://docs.docker.com/engine/install/)
