@@ -1,0 +1,13 @@
+# Terraform state
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.*
+
+# Diretórios gerados pelo Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Variáveis sensíveis
+*.tfvars
+!*.tfvars.example
