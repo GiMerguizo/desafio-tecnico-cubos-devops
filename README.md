@@ -98,6 +98,10 @@ Para o Windows, pode ser que haja algum erro. Algumas dicas para solucionar prob
 
 **Obs.:** O `docker-compose.yml` não foi utilizado diretamente para subir a aplicação, mas serviu de modelo e pode ser usado como alternativa, alterando os parâmetros configurados.
 
+## Melhorias Futuras
+- Pipeline de CI/CD para deploy automatizado
+- Dashboards prontos no Grafana para monitoramento
+- Uso de .env no lugar de terraform.tfvars para variáveis sensíveis
 
 ## Referências
 - [Terraform Registry - Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs)
@@ -111,3 +115,4 @@ Para o Windows, pode ser que haja algum erro. Algumas dicas para solucionar prob
 **Links Extras**
 - [Instalação Docker](https://docs.docker.com/engine/install/)
 - [Instalação Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
