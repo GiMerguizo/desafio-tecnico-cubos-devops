@@ -29,9 +29,9 @@ resource "docker_container" "postgres" {
   restart       = "always"
   
   env = [
-    "POSTGRES_USER=admin",
-    "POSTGRES_PASSWORD=secure_p4$$w0rd",
-    "POSTGRES_DB=postgres_db"
+    "POSTGRES_USER=${var.db_user}",
+    "POSTGRES_PASSWORD=${var.db_password}",
+    "POSTGRES_DB=${var.db_name}"
   ]
 
   ports {
@@ -72,17 +72,15 @@ resource "docker_container" "backend_app" {
   }
 
   env = [
-    "port=3000",
-    "user=admin",
-    "pass=secure_p4$$w0rd",
-    "db_port=5432",
-    "host=postgres_db",
-    "db_name=postgres_db"
+    "port=${var.backend_port}",
+    "user=${var.db_user}",
+    "pass=${var.db_password}",
+    "db_port=${var.db_port}",
+    "host=${var.db_host}",
+    "db_name=${var.db_name}"
   ]
 
-  depends_on = [
-    docker_container.postgres
-  ]
+  depends_on = [docker_container.postgres]
 }
 
 # Configuração do frontend
